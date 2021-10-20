@@ -167,6 +167,9 @@ glimpse(cells)
 We will plot growth curve for each bottle. Need cell abundance and days
 data.
 
+**NOTE some abundance timepoints are missing due to sample labels
+falling off in LN2**
+
 First, let’s set up some aesthetics for our plot.
 
 ``` r
