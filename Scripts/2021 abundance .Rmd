@@ -23,7 +23,7 @@ We can toggle on/off warning in chunks if we dont want them in our final markdow
 
 # Import Data 
 
-```{r}
+```{r warning=FALSE}
 excel_sheets("~/Desktop/github/144l_students_2021/Input_Data/week4/144L_2021_BactAbund.xlsx")
 
 #Mac: for arrow, use option + minus sign
@@ -75,7 +75,7 @@ We will plot growth curve for each bottle. Need cell abundance and days data.
 
 First, let's set up some aesthetics for our plot.
 
-```{r}
+```{r warning=FALSE}
 #assign hex colors to our different treatments
 custom.colors <- c("Control" = "#377EB8", "Kelp Exudate" = "#4DAF4A", "Kelp Exudate_Nitrate_Phosphate" = "#E41A1C", "Glucose_Nitrate_Phosphate" = "#FF7F00")
 
@@ -117,7 +117,7 @@ log(x) gives the natural log of x, not log base 10
 log10(x) gives log base 10
 log2(x) gives log base 2
 
-```{r}
+```{r warning=FALSE}
 ln_cells <- cells %>%
   group_by(Treatment, Bottle) %>%
   mutate(ln_cells = log(cells_L),
@@ -126,7 +126,7 @@ ln_cells <- cells %>%
 
 Now, let's plot our newly calculated data!
 
-```{r fig.height=6, fig.width=8}
+```{r fig.height=6, fig.width=8, warning=FALSE}
 ln_cells %>%
   mutate(dna = ifelse(DNA_Sample == T, "*", NA)) %>%
   ggplot(aes(x=days, y=diff_ln_cells, group = interaction(Treatment, Bottle))) +
@@ -144,7 +144,7 @@ Exponential growth seems to be occurring right at the beginning of the experimen
 
 Let's try plotting ln_cells to see if that can help us identify exponential growth in the control a little better.
 
-```{r fig.height=6, fig.width=8}
+```{r fig.height=6, fig.width=8, warning=FALSE}
 ln_cells %>%
   mutate(dna = ifelse(DNA_Sample == T, "*", NA)) %>%
   ggplot(aes(x=days, y=ln_cells, group = interaction(Treatment, Bottle))) +

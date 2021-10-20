@@ -195,8 +195,6 @@ cells %>%
   theme_bw()
 ```
 
-    ## Warning: Removed 40 rows containing missing values (geom_text).
-
 ![](2021-abundance-_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 # Next Steps
@@ -244,8 +242,6 @@ ln_cells %>%
   theme_bw()
 ```
 
-    ## Warning: Removed 40 rows containing missing values (geom_text).
-
 ![](2021-abundance-_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 Exponential growth seems to be occurring right at the beginning of the
 experiment between 0-1 days for most of the bottles.
@@ -267,7 +263,5 @@ ln_cells %>%
   facet_wrap("Bottle", ncol = 2) +
   theme_bw()
 ```
-
-    ## Warning: Removed 40 rows containing missing values (geom_text).
 
 ![](2021-abundance-_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
