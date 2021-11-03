@@ -1,6 +1,6 @@
 ---
 title: "2021 Bacterial Abundance Data (DAPI) & TOC Data Analysis"
-author: "Aldo Giammanco"
+author: "Your Name"
 date: "11/03/2021"
 output: github_document
 ---
@@ -20,20 +20,20 @@ library(lubridate)
 ```{r}
 #make sure to update the filepaths for your own locally-stored repository! 
 
-excel_sheets("~/Desktop/github/144l_students_2021/Input_Data/week4/144L_2021_BactAbund.xlsx")
+excel_sheets("~/Documents/144l_students_2021/Input_Data/week4/144L_2021_BactAbund.xlsx")
 
 #Mac: to make an arrow, use Option + - 
 
-metadata <- read_excel("~/Desktop/github/144l_students_2021/Input_Data/week4/144L_2021_BactAbund.xlsx", sheet = "Metadata")
+metadata <- read_excel("~/Documents/144l_students_2021/Input_Data/week4/144L_2021_BactAbund.xlsx", sheet = "Metadata")
 
 glimpse(metadata)
 #unique(metadata$Bottle)
 #unique(metadata$Treatment)
 
-dapi_data <- read_excel("~/Desktop/github/144l_students_2021/Input_Data/week4/144L_2021_BactAbund.xlsx", sheet = "DAPI_Data")
+dapi_data <- read_excel("~/Documents/144l_students_2021/Input_Data/week4/144L_2021_BactAbund.xlsx", sheet = "DAPI_Data")
 glimpse(dapi_data)
 
-toc_data <- read_excel("~/Desktop/github/144l_students_2021/Input_Data/week4/144L_2021_BactAbund.xlsx", sheet = "TOC_Data")
+toc_data <- read_excel("~/Documents/144l_students_2021/Input_Data/week4/144L_2021_BactAbund.xlsx", sheet = "TOC_Data")
 glimpse(toc_data)
 
 dapi_metadata <- metadata %>%
@@ -240,7 +240,7 @@ glimpse(bactcarbon)
 
 #update this filepath to match your own repository 
 #save your data to a .csv 
-write.csv(bactcarbon, "~/Desktop/github/144l_students_2021/Output_Data/week6/211101_dapi_data_calculations.csv")
+write.csv(bactcarbon, "~/Documents/144l_students_2021/Output_Data/week6/211101_dapi_data_calculations.csv")
 
 #normally we would do this for the individual bottles and then calculate averages, but can't do that here since we have data from combined bottles 
 
@@ -260,7 +260,7 @@ trt_ba <- bactcarbon %>%
 
 trt_ba
 
-saveRDS(trt_ba, "~/Desktop/github/144l_students_2021/Output_Data/week6/144L_trt_ba_plot.rds")
+saveRDS(trt_ba, "~/Documents/144l_students_2021/Output_Data/week6/144L_trt_ba_plot.rds")
 ```
 
 ```{r fig.height=4, fig.width=6}
@@ -275,7 +275,7 @@ trt_ba_biovol <- bactcarbon %>%
 
 trt_ba_biovol
 
-saveRDS(trt_ba_biovol, "~/Desktop/github/144l_students_2021/Output_Data/week6/144L_trt_ba_plot.rds")
+saveRDS(trt_ba_biovol, "~/Documents/144l_students_2021/Output_Data/week6/144L_trt_ba_biovol_plot.rds")
 ```
 
 Q4: How do the bacterial carbon values change when we account for changes in cell biovolume as the experiment progresses? 
@@ -331,7 +331,7 @@ delta_cells
 
 ```{r}
 #uncomment the next line below if you need to install the package "patchwork" (remove the #)
-#install.packages("patchwork")
+# install.packages("patchwork")
 library(patchwork)
 ```
 
@@ -348,7 +348,7 @@ A5:
 # Save Data 
 
 ```{r}
-saveRDS(bactcarbon, "~/Desktop/github/144l_students_2021/Output_Data/week6/144L_Exp_Processed_BactAbund.rds")
+saveRDS(bactcarbon, "~/Documents/144l_students_2021/Output_Data/week6/144L_Exp_Processed_BactAbund.rds")
 ```
 
 # Incorporate TOC data
@@ -482,4 +482,4 @@ deldoc / deldoc_bv / bioav / bioav_bv / bge / bge_bv + plot_annotation(tag_level
 ```
 Q7: How does incorporating biovolume change (or not change) your interpretation of the ∆DOC, Bioavaliable DOC, and BGE values? Provide 1-2 sentences for each comparison (a vs. b,c vs. d & e vs. f)
 
-A7: hi
+A7: 
