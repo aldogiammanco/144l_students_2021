@@ -921,4 +921,4 @@ trends remain about the same as well as the values. e v f -
 Incorporating biovolume does change our interpretation of the BGE
 values. When biovolume is taken into consideration, the trends change as
 every treatment appears to almost double their BGE value, while the
-control remains about the same.
+control remains about the same. grade
