@@ -484,4 +484,4 @@ Q7: How does incorporating biovolume change (or not change) your interpretation 
 
 A7: a v b - Incorporating biovolume does not change our interpretation of ∆DOC very much. The overall trend remains about the same and the changes in the amounts between the two graphs don't appear to be statistically significant.
 c v d - This is similar to a v b in that incorportating biovolume does not really change our interpretations. The trends remain about the same as well as the values.
-e v f - Incorporating biovolume does change our interpretation of the BGE values. When biovolume is taken into consideration, the trends change as every treatment appears to almost double their BGE value, while the control remains about the same.
+e v f - Incorporating biovolume does change our interpretation of the BGE values. When biovolume is taken into consideration, the trends change as every treatment appears to almost double their BGE value, while the control remains about the same. grade
