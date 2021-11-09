@@ -37,3 +37,7 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+ACIDD_Remin_fastq
+Reference_Database
+
