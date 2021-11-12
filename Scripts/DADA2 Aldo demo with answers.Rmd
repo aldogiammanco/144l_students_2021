@@ -1,5 +1,5 @@
 ---
-title: "DADA2 aldo demo"
+title: "DADA2 aldo demo with answers"
 author: "Aldo Giammanco"
 date: "11/8/2021"
 output: github_document
@@ -86,7 +86,7 @@ rbind(FWD.ForwardReads = sapply(FWD.orients, primerHits, fn = fnFs[[1]]),
 
 Q1: Why do we see primers in the reverse complement of FWD.ReverseReads and REV.ForwardReads? What will we use to remove them later?
 
-A1: We see primers because our reads were long enough to the point that the machinery sequenced some of the primer on the end. We will use the MergePairs function and add trimOverhang=T.
+A1: We see primers because our reads were long enough to the point that the machinery sequenced some of the primer on the end. We will use the MergePairs function and add trimOverhang=T to remove them later.
 
 # Insepct read quality profiles 
 
@@ -213,14 +213,14 @@ head(mergers[[1]])
 ```
 Q9: What does the nmatch column tell us about our merged forward & reverse reads?
 
-A9: 
+A9: The nmatch column tells us the number of matches in overlap for the forward and reverse reads - it tells us how many bases matched.
 
 save the unassigned merged reads
 
 ```{r}
 #tutorial says week 5/6, just save in Input & Output data for Week 7 (we are on a different schedule this year than previous)
-saveRDS(mergers, "~/Desktop/github/144l_students_2021/Output_Data/week6/dada_merged.rds")
-saveRDS(mergers, "~/Desktop/github/144l_students_2021/Input_Data/week4/dada_merged.rds")
+saveRDS(mergers, "~/Desktop/github/144l_students_2021/Output_Data/week7/dada_merged.rds")
+saveRDS(mergers, "~/Desktop/github/144l_students_2021/Input_Data/week7/dada_merged.rds")
 ```
 
 Construct a sequence table of our samples that is analogous to the "OTU table" produced by classical methods
@@ -265,10 +265,10 @@ create a table out of the taxa data (one with the sequences and taxonomic assign
 these are the tables you want to save!! 
 
 ```{r}
-saveRDS(t(seqtab.nochim), "~/Desktop/github/144l_students_2021/Output_Data/week6/seqtab-nochimtaxa.rds")
-saveRDS(taxa, "~/Desktop/github/144l_students_2021/Output_Data/week6/taxa.rds")
+saveRDS(t(seqtab.nochim), "~/Desktop/github/144l_students_2021/Output_Data/week7/seqtab-nochimtaxa.rds")
+saveRDS(taxa, "~/Desktop/github/144l_students_2021/Output_Data/week7/taxa.rds")
 #save in both Output and Input data folders for week7
-saveRDS(t(seqtab.nochim), "~/Desktop/github/144l_students_2021/Input_Data/week4/seqtab-nochimtaxa.rds")
-saveRDS(taxa, "~/Desktop/github/144l_students_2021/Input_Data/week4/taxa.rds")
+saveRDS(t(seqtab.nochim), "~/Desktop/github/144l_students_2021/Input_Data/week7/seqtab-nochimtaxa.rds")
+saveRDS(taxa, "~/Desktop/github/144l_students_2021/Input_Data/week7/taxa.rds")
         
 ```
